@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- SEO = Básico -->
+    <!-- Cada página del sitio tiene que ser diferente el título y la descripción -->
+    <title>Deus Ex Machina calculator</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Etiquetas Open Graph y Twitter Card, para crear el SEO de Redes Sociales -->
+    <meta property="og:title" content="Título de tu página" />
+    <meta property="og:description" content="Descripción de tu página" />
+    <meta
+      property="og:image"
+      content="URL de la imagen que quieres mostrar en las redes sociales"
+    />
+    <meta property="og:url" content="URL de tu página" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Título de tu página" />
+    <meta name="twitter:description" content="Descripción de tu página" />
+    <meta
+      name="twitter:image"
+      content="URL de la imagen que quieres mostrar en Twitter"
+    />
+
+    <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
+    <link rel="manifest" href="site.webmanifest" />
+    <!-- icono de acceso para IOS -->
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- links de estilos -->
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <!-- Se cambia el tema de algunos navegadores -->
+    <meta name="theme-color" content="#fafafa" />
+    <!-- Código de las plataformas de Análisis -->
+    <script></script>
+    <!-- Scripts a cargar antes de la renderización -->
+    <!-- <script src="preloader.js"></script> -->
+    <script src="js/calculator.js"></script>
+  </head>
+  <body class="calculator__body">
+    <div class="grid__container" id="container">
+        <button class="container__btn btn__m btn-mc" id="btnMc">Mc</button>
+        <section class="container__result" id="result">0123456789</section>
+        <button class="container__btn btn__m btn-mplus" id="btnMplus">M+</button>
+        <button class="container__btn btn__grey btn-ac" id="btnAC">AC</button>
+        
+        <button class="container__btn btn__grey btn-7" id="btn7">7</button>
+        <button class="container__btn btn__grey btn-8" id="btn8">8</button>
+        <button class="container__btn btn__grey btn-9" id="btn9">9</button>
+        <button class="container__btn btn__grey btn-subtract" id="btnsubtract">-</button>
+        <button class="container__btn btn__grey btn-divide" id="btndivide">/</button>
+
+        <button class="container__btn btn__grey btn-percent" id="btnPercent">%</button>
+        <button class="container__btn btn__grey btn-4" id="btn4">4</button>
+        <button class="container__btn btn__grey btn-5" id="btn5">5</button>
+        <button class="container__btn btn__grey btn-6" id="btn6">6</button>
+        <button class="container__btn btn__grey btn-add" id="btnadd">+</button>
+        <button class="container__btn btn__grey btn-multiply" id="btnmultiply">x</button>
+        
+        <button class="container__btn btn__grey btn-point" id="btnpoint">.</button>
+        <button class="container__btn btn__grey btn-1" id="btn1">1</button>
+        <button class="container__btn btn__grey btn-2" id="btn2">2</button>
+        <button class="container__btn btn__grey btn-3" id="btn3">3</button>
+        <button class="container__btn btn__grey btn-equals" id="btnequals">=</button>
+
+    </div>
+
+  </body>
+</html>
