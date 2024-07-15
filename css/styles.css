@@ -43,6 +43,7 @@ html {
 }
 .landing-page__body {
   height: 100svh;
+  width: 100svw;
   border-radius: 0.75rem;
   background: var(--color-bg-primary);
 
@@ -93,8 +94,8 @@ h2 {
 /* *** LANDSCAPE MODE *** */
 /* *********************************** */
 .calculator__body {
-  width: 100svw;
-  height: 100svh;
+  width: 100dvw;
+  height: 100dvh;
   background-color: var(--color-bg-calculator);
 }
 .grid__container {
