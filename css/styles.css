@@ -29,6 +29,9 @@
   --color-bg-secondary: #dddddd;
   --color-bg-calculator: #535353;
   --color-key-primary: #b1b1b1;
+  --color-key-secondary: #c9c9c9;
+  --color-key-active:#d4d4d4;
+  --color-key-operator: #888888;
   --color-result-text: #0a0a0a;
   --color-bg-result: #f1f0f0;
   --color-text-white: #f7f7f7;
@@ -167,11 +170,20 @@ header{
   border-radius: 0.375rem;
   cursor: pointer;
 }
+.container__btn:hover {
+  background-color: var(--color-key-secondary);
+}
+.container__btn:active{
+  background-color: var(--color-key-active);
+}
 .btn__m {
   background-color: var(--color-bg-primary);
 }
 .btn__grey {
   background-color: var(--color-key-primary);
+}
+.btn__operator{
+  background-color: var(--color-key-operator);
 }
 .container__result {
   width: 100%;

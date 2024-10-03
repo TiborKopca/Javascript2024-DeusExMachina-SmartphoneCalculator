@@ -1,4 +1,7 @@
 // console.log("test");
+//TODO : add <- back button to delete last number
+//TODO : add evaluation of the max characters
+
 
 //CREATE VARIABLES FOR DOM ELEMENTS
 const btn1 = document.getElementById("btn1");
@@ -35,6 +38,7 @@ const NUMBER = "number";
 const OPERATION = "operation";
 const RESULT = "result";
 
+//MEMORY OF RESULTS
 let resultValues = [];
 
 //ORIENTATION CHANGE - LOADING DIFFERENT PAGES
@@ -130,9 +134,8 @@ const calculator = new Calculator();
 
 
 
-//RESULT
+//RESULT COPY TO CLIPBOARD
 result.addEventListener("click", function () {
-  //copy to the clipboard
   navigator.clipboard.writeText(result.value);
   //   alert("Copiado al portapapeles");
   result.style.backgroundColor = "#00ff00";
@@ -151,7 +154,9 @@ btnAC.addEventListener("click", function () {
 
 //OPERATIONS
 btnSubtract.addEventListener("click", function () {
+  //slice(-1) returns the last character of the string
   let lastchar = result.value.slice(-1);
+  // console.log(lastchar);
   if (
     lastchar === "%" ||
     lastchar === "-" ||
@@ -160,14 +165,89 @@ btnSubtract.addEventListener("click", function () {
     lastchar === "+" ||
     lastchar === "x" ||
     lastchar === ","
-  ) {
-  } else if (result === "") {
+  ){
+    //if the last character is one of the operators, delete the last character and add the operator
+    result.value = result.value.slice(0, -1);
+    result.value += "-";
+  } 
+  else if (result === "") {
   } else {
     result.value += "-";
   }
 });
 
+btnAdd.addEventListener("click", function () {
+  //slice(-1) returns the last character of the string
+  let lastchar = result.value.slice(-1);
+  // console.log(lastchar);
+  if (
+    lastchar === "%" ||
+    lastchar === "-" ||
+    lastchar === "/" ||
+    lastchar === "*" ||
+    lastchar === "+" ||
+    lastchar === "x" ||
+    lastchar === ","
+  ){
+    //if the last character is one of the operators, delete the last character and add the operator
+    result.value = result.value.slice(0, -1);
+    result.value += "+";
+  } 
+  else if (result === "") {
+  } else {
+    result.value += "+";
+  }
+});
+
+btnMultiply.addEventListener("click", function () {
+  //slice(-1) returns the last character of the string
+  let lastchar = result.value.slice(-1);
+  // console.log(lastchar);
+  if (
+    lastchar === "%" ||
+    lastchar === "-" ||
+    lastchar === "/" ||
+    lastchar === "*" ||
+    lastchar === "+" ||
+    lastchar === "x" ||
+    lastchar === ","
+  ){
+    //if the last character is one of the operators, delete the last character and add the operator
+    result.value = result.value.slice(0, -1);
+    result.value += "*";
+  } 
+  else if (result === "") {
+  } else {
+    result.value += "*";
+  }
+});
+
+btnDivide.addEventListener("click", function () {
+  //slice(-1) returns the last character of the string
+  let lastchar = result.value.slice(-1);
+  // console.log(lastchar);
+  if (
+    lastchar === "%" ||
+    lastchar === "-" ||
+    lastchar === "/" ||
+    lastchar === "*" ||
+    lastchar === "+" ||
+    lastchar === "x" ||
+    lastchar === ","
+  ){
+    //if the last character is one of the operators, delete the last character and add the operator
+    result.value = result.value.slice(0, -1);
+    result.value += "/";
+  } 
+  else if (result === "") {
+  } else {
+    result.value += "/";
+  }
+});
+
 btnPercent.addEventListener("click", function () {
+  //A % of B is the same as (A ÷ 100) × B. With the commutative property, we can obtain that percentages are commutative; (A ÷ 100) × B = AB ÷ 100.
+  //50%9 = 
   let lastchar = result.value.slice(-1);
   if (
     lastchar === "%" ||
@@ -186,11 +266,18 @@ btnPercent.addEventListener("click", function () {
 
 //EVALUATE AND SAVE RESULT
 btnEquals.addEventListener("click", function () {
-  //ADD OPERATION TO THE RESULT VALUES
-  result.push(result.value);
+  //ADD THE OPERATION WRITTEN TO THE RESULT VALUES ARRAY, TO STORE THE OPERATION 
+  resultValues.push(result.value);
   //EVALUATE THE RESULT
-  result.value = eval(result.value);
-  //ADD THE RESULT TO THE RESULT VALUES
+  try {
+    let evalResult = eval(result.value);  
+    result.value = parseFloat(evalResult).toFixed(2);
+    // console.log((parseFloat(result.value)).toFixed(2));
+  } catch (error) {
+    // console.log(error);
+    result.value = "Error";
+  }
+  //ADD THE RESULT TO THE RESULT VALUES ARRAY, TO STORE THE RESULTS
   resultValues.push(result.value);
 });
 
@@ -224,6 +311,9 @@ btn9.addEventListener("click", function () {
 });
 btn0.addEventListener("click", function (event) {
   result.value += btn0.innerText;
+});
+btnPoint.addEventListener("click", function (event) {
+  result.value += btnPoint.innerText;
 });
 
 //KEYPRESS EVENTS
