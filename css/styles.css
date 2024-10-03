@@ -42,8 +42,8 @@ html {
   font-family: Lato-bold, Arial, Helvetica, sans-serif;
 }
 .landing-page__body {
-  height: 100dvh;
-  width: 100dvw;
+  height: 100svh;
+  width: 100svw;
   border-radius: 0.75rem;
   background: var(--color-bg-primary);
 
@@ -71,8 +71,8 @@ header{
   justify-content: center;
 
   @media screen and (max-width: 320px) {
-    width: 100dvw;
-    height: 100dvh;
+    width: 100svw;
+    height: 100svh;
   }
 }
 .title-main {
@@ -176,12 +176,13 @@ header{
 .container__result {
   width: 100%;
   height: 100%;
-  grid-column: 2 / span 4;
+  grid-column: 2 / span 3;
   grid-row: 1 / span 1;
 
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  text-align: center;
 
   border: none;
   background-color: var(--color-bg-result);
@@ -196,7 +197,7 @@ header{
 }
 /* GRID DEFINITIONS */
 .btn-mc {
-  grid-column: 1 / span 1;
+  grid-column: 5 / span 1;
   grid-row: 1 / span 1;
 }
 .btn-mplus {
@@ -205,7 +206,7 @@ header{
 }
 .btn-ac {
   grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 1 / span 1;
 }
 .btn-7 {
   grid-column: 2 / span 1;
@@ -229,7 +230,7 @@ header{
 }
 .btn-percent {
   grid-column: 1 / span 1;
-  grid-row: 3 / span 1;
+  grid-row: 2 / span 1;
 }
 .btn-4 {
   grid-column: 2 / span 1;
@@ -251,7 +252,11 @@ header{
   grid-column: 6 / span 1;
   grid-row: 3 / span 1;
 }
-.btn-point {
+.btn-decimal {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+.btn-0 {
   grid-column: 1 / span 1;
   grid-row: 4 / span 1;
 }

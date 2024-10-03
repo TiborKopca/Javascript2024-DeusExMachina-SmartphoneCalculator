@@ -11,10 +11,12 @@
 
 ## Screenshot
 >Final Online Website Screenshot
-![here](/screenshots/screenshot.png)
+![portrait](/img/screenshots/screenshot1.png)
+![landscape](/img/screenshots/screenshot2.png)
 
 ## Online Link
 [github Pages Link](https://tiborkopca.github.io/Javascript2024-DeusExMachina-SmartphoneCalculator/)
+[Vercel](https://javascript2024-deus-ex-machina-smartphone-calculator-rc8ei62ah.vercel.app/)
 
 ## Authors
 

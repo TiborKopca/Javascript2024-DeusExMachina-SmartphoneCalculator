@@ -32,7 +32,7 @@
     <link rel="apple-touch-icon" href="icon.png" />
     <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
+
     <!-- links de estilos -->
     <link rel="stylesheet" href="css/styles.css" />
     
@@ -42,33 +42,34 @@
     <script></script>
     <!-- Scripts a cargar antes de la renderización -->
     <!-- <script src="preloader.js"></script> -->
-    <script src="js/calculator.js"></script>
+    <script src="js/calculator.js" defer></script>
   </head>
   <body class="calculator__body">
     <div class="grid__container" id="container">
         <button class="container__btn btn__m btn-mc" id="btnMc">Mc</button>
-        <section class="container__result" id="result">0123456789</section>
+        <input type="text" name="" class="container__result" id="input_result" value="" readonly maxlength="13"/>
         <button class="container__btn btn__m btn-mplus" id="btnMplus">M+</button>
         <button class="container__btn btn__grey btn-ac" id="btnAC">AC</button>
         
         <button class="container__btn btn__grey btn-7" id="btn7">7</button>
         <button class="container__btn btn__grey btn-8" id="btn8">8</button>
         <button class="container__btn btn__grey btn-9" id="btn9">9</button>
-        <button class="container__btn btn__grey btn-subtract" id="btnsubtract">-</button>
-        <button class="container__btn btn__grey btn-divide" id="btndivide">/</button>
+        <button class="container__btn btn__grey btn-subtract" id="btnSubtract">-</button>
+        <button class="container__btn btn__grey btn-divide" id="btnDivide">/</button>
 
         <button class="container__btn btn__grey btn-percent" id="btnPercent">%</button>
         <button class="container__btn btn__grey btn-4" id="btn4">4</button>
         <button class="container__btn btn__grey btn-5" id="btn5">5</button>
         <button class="container__btn btn__grey btn-6" id="btn6">6</button>
-        <button class="container__btn btn__grey btn-add" id="btnadd">+</button>
-        <button class="container__btn btn__grey btn-multiply" id="btnmultiply">x</button>
+        <button class="container__btn btn__grey btn-add" id="btnAdd">+</button>
+        <button class="container__btn btn__grey btn-multiply" id="btnMultiply">x</button>
         
-        <button class="container__btn btn__grey btn-point" id="btnpoint">.</button>
+        <button class="container__btn btn__grey btn-decimal" id="btnDecimal">.</button>
+        <button class="container__btn btn__grey btn-0" id="btn0">0</button>
         <button class="container__btn btn__grey btn-1" id="btn1">1</button>
         <button class="container__btn btn__grey btn-2" id="btn2">2</button>
         <button class="container__btn btn__grey btn-3" id="btn3">3</button>
-        <button class="container__btn btn__grey btn-equals" id="btnequals">=</button>
+        <button class="container__btn btn__grey btn-equals" id="btnEquals">=</button>
 
     </div>
 
